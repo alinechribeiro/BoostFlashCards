@@ -1,0 +1,37 @@
+:root {
+  --bg: #0f1419;
+  --card: #1a2332;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --text: #e7e9ea;
+  --muted: #8b98a5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+input, textarea {
+  font: inherit;
+}

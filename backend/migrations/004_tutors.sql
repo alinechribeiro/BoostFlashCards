@@ -1,0 +1,25 @@
+-- Tutor profiles and subjects
+
+USE boostflashcards;
+
+CREATE TABLE IF NOT EXISTS tutor_profiles (
+  user_id BIGINT NOT NULL PRIMARY KEY,
+  bio TEXT NOT NULL,
+  headline VARCHAR(255) NOT NULL DEFAULT '',
+  hourly_rate_cents INT NOT NULL DEFAULT 0,
+  stripe_connect_account_id VARCHAR(255) NOT NULL DEFAULT '',
+  is_listed TINYINT(1) NOT NULL DEFAULT 0,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS tutor_subjects (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  tutor_user_id BIGINT NOT NULL,
+  subject_name VARCHAR(255) NOT NULL,
+  level VARCHAR(255) NOT NULL DEFAULT '',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (tutor_user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+

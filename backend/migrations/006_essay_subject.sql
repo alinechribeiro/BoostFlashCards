@@ -1,0 +1,3 @@
+ALTER TABLE essay_requests
+ADD COLUMN subject VARCHAR(255) NOT NULL DEFAULT '';
+
