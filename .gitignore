@@ -10,6 +10,7 @@ backend/coverage.out
 
 # Env / secrets (do NOT commit real values)
 .env
+.env.production
 backend/.env
 
 # Logs and temp files
