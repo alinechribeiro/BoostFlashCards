@@ -154,7 +154,7 @@ const socialBtnStyle = {
   border: '1px solid #333',
   background: 'var(--card)',
   color: 'inherit',
-  textAlign: 'left',
+  textAlign: 'left' as const,
 }
 
 

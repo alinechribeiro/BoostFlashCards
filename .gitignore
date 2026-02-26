@@ -30,6 +30,6 @@ Thumbs.db
 dist/
 build/
 
-# AWS
-.aws/
-.pem
+*.pem
+
+private/
